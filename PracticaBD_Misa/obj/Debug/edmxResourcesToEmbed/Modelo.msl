@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BDPruebasMisaModelStoreContainer" CdmEntityContainer="BDPruebasMisaEntities">
+    <EntitySetMapping Name="puertas">
+      <EntityTypeMapping TypeName="BDPruebasMisaModel.puertas">
+        <MappingFragment StoreEntitySet="puertas">
+          <ScalarProperty Name="door_id" ColumnName="door_id" />
+          <ScalarProperty Name="doorName" ColumnName="doorName" />
+          <ScalarProperty Name="doorStatus" ColumnName="doorStatus" />
+          <ScalarProperty Name="doorLocation" ColumnName="doorLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="BDPruebasMisaModel.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="user_firstName" ColumnName="user_firstName" />
+          <ScalarProperty Name="user_lastName" ColumnName="user_lastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

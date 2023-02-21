@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BDPruebasMisaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="puertas">
+          <Key>
+            <PropertyRef Name="door_id" />
+          </Key>
+          <Property Name="door_id" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="doorName" Type="varchar" MaxLength="100" />
+          <Property Name="doorStatus" Type="varchar" MaxLength="100" />
+          <Property Name="doorLocation" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="100" />
+          <Property Name="user_firstName" Type="varchar" MaxLength="100" />
+          <Property Name="user_lastName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="BDPruebasMisaModelStoreContainer">
+          <EntitySet Name="puertas" EntityType="Self.puertas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BDPruebasMisaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="puertas">
+          <Key>
+            <PropertyRef Name="door_id" />
+          </Key>
+          <Property Name="door_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="doorName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="doorStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="doorLocation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="user_firstName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="user_lastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="BDPruebasMisaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="puertas" EntityType="Self.puertas" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BDPruebasMisaModelStoreContainer" CdmEntityContainer="BDPruebasMisaEntities">
+          <EntitySetMapping Name="puertas">
+            <EntityTypeMapping TypeName="BDPruebasMisaModel.puertas">
+              <MappingFragment StoreEntitySet="puertas">
+                <ScalarProperty Name="door_id" ColumnName="door_id" />
+                <ScalarProperty Name="doorName" ColumnName="doorName" />
+                <ScalarProperty Name="doorStatus" ColumnName="doorStatus" />
+                <ScalarProperty Name="doorLocation" ColumnName="doorLocation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuarios">
+            <EntityTypeMapping TypeName="BDPruebasMisaModel.usuarios">
+              <MappingFragment StoreEntitySet="usuarios">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="user_firstName" ColumnName="user_firstName" />
+                <ScalarProperty Name="user_lastName" ColumnName="user_lastName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDPruebasMisaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="puertas">
+    <Key>
+      <PropertyRef Name="door_id" />
+    </Key>
+    <Property Name="door_id" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="doorName" Type="varchar" MaxLength="100" />
+    <Property Name="doorStatus" Type="varchar" MaxLength="100" />
+    <Property Name="doorLocation" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="100" />
+    <Property Name="user_firstName" Type="varchar" MaxLength="100" />
+    <Property Name="user_lastName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="BDPruebasMisaModelStoreContainer">
+    <EntitySet Name="puertas" EntityType="Self.puertas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
